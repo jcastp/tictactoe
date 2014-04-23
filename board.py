@@ -15,7 +15,20 @@ class Board:
         """Converts the layout of the board in a human readable
         format.
         """
-        raw_layout = 
+        # TODO
+        for i in range(len(self.pieces)):
+            row_print= ""
+            for j in range(len(self.pieces[i])):
+                if self.pieces[i][j] is None:
+                    print_char = " "
+                elif self.pieces[i][j] is True:
+                    print_char = "O"
+                elif self.pieces[i][j] is False:
+                    print_char = "X"
+                row_print += print_char
+            print(row_print)
+            print('\n')
+            print('-+-+-')
         return
 
 

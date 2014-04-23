@@ -3,6 +3,7 @@
 # Simple tic tac toe game
 
 import board
+import rules
 
 def play():
     print("Playing a game ...")
@@ -17,18 +18,18 @@ def play():
 
     # While victory has not been achieved or the board still has 
     # empty places, we keep playing
-    while( not victory or game_board.get_empty_spaces != 0):
+    while( not victory and game_board.get_empty_spaces != 0):
         # Print the board
         game_board.print_board()
 
         # A player inserts a piece in the board, taking alternate
         # turns
-        # TODO
+        # TODO How to determine which player plays
 
         # Check victory conditions
         # If victory is achieved by the player, the loop should
         # be interrupted
-        victory = True
+        victory = rules.winning_condition_bf()
 
     
     # Check if the loop has been ended by exausting all the
