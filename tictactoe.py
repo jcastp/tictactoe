@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+ #!/usr/bin/python3
 #
 # Simple tic tac toe game
 
@@ -18,7 +18,7 @@ def play():
 
     # While victory has not been achieved or the board still has 
     # empty places, we keep playing
-    while( not victory and game_board.get_empty_spaces != 0):
+    while( not victory and game_board.get_empty_spaces != 0 ):
         # Print the board
         game_board.print_board()
 
